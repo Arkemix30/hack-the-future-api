@@ -1,9 +1,12 @@
 # isort: skip_file
 import json
+from typing import Union
+from datetime import datetime as dt
 
 from fastapi import APIRouter, Depends, HTTPException, Response, status
 
 from app.core import get_logger
+from app.definitions.general import EnergyLocation
 from app.models import Energy
 from app.schemas.energy_schema import (
     EnergyCreateSchema,
@@ -22,6 +25,35 @@ async def list_energies(
     energy_service: EnergyService = Depends(),
 ) -> list[Energy]:
     result = energy_service.get_all()
+    if isinstance(result, AppError):
+        raise HTTPException(
+            status_code=result.error_type,
+            detail=result.message,
+        )
+    return result
+
+
+@energy_router.get("/consumo_promedio_mensual/")
+async def consumo_promedio_mensual(
+    year: int,
+    location: Union[EnergyLocation, None] = EnergyLocation.PLANTA_DE_ENVASADO,
+    energy_service: EnergyService = Depends(),
+) -> Response:
+    if year is None:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Year is required",
+        )
+
+    if year < 1900 or year > dt.now().year:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Year must be between 1900 and {dt.now().year}",
+        )
+
+    result = energy_service.get_average_monthly_by_location_and_year(
+        year, location
+    )
     if isinstance(result, AppError):
         raise HTTPException(
             status_code=result.error_type,

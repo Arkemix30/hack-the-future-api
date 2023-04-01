@@ -3,10 +3,12 @@ from typing import Union
 
 # Third Party Imports
 from fastapi import Depends
+from sqlalchemy import func
 from sqlmodel import Session, select
 
 # Local Imports
 from app.core import get_logger
+from app.definitions.general import EnergyLocation
 from app.infrastructure import get_db_session
 from app.models import Energy
 from app.utils.errors import DatabaseError, handle_database_error
@@ -130,3 +132,64 @@ class EnergyRepository:
             logger.error(f"Error while deleting Energy, error: {err}")
             self.session.rollback()
             raise err
+
+    @handle_database_error
+    def get_average_monthly_by_location_and_year(
+        self,
+        year: int,
+        location: EnergyLocation,
+    ) -> Union[list[Energy], DatabaseError]:
+        """
+        Get the average monthly energy consumption for a location and year.
+
+        Parameters
+        ----------
+        `location` : str
+            The location to get the average monthly energy consumption for
+        `year` : int
+            The year to get the average monthly energy consumption for
+
+        Returns
+        -------
+        `Union[list[Energy], DatabaseError]`
+            A list of energys if found, otherwise an DatabaseError
+        """
+        statement = (
+            select(
+                func.date_trunc("month", Energy.datetime).label("month"),
+                func.avg(Energy.quantity).label("avg_monthly_consumption"),
+            )
+            .where(
+                Energy.location == location,
+                Energy.datetime >= f"{year}-01-01 00:00:00",
+                Energy.datetime <= f"{year}-12-31 23:59:59",
+            )
+            .group_by("month")
+            .order_by("month")
+        )
+
+        try:
+            result = self.session.exec(statement).fetchall()
+            result = [dict(row) for row in result]
+        except Exception as err:
+            logger.error(
+                f"Error while fetching consumed energy by year and energy type, error: {err}"
+            )
+            raise err
+
+        if not result:
+            return {str(i): 0 for i in range(1, 13)}
+
+        # Convert datetime to string
+        response = {}
+        for row in result:
+            response[int(row["month"].strftime("%m"))] = round(
+                row["avg_monthly_consumption"], 2
+            )
+
+        # Fill the missing months with 0
+        for month in range(1, 13):
+            if month not in response:
+                response[month] = 0
+
+        return response

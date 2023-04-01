@@ -3,21 +3,23 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from app.definitions import EmissionType, EnergyCategory
+from app.definitions import EmissionType, EnergyCategory, EnergyLocation
 
 
 class EnergyBaseSchema(BaseModel):
     quantity: Optional[float]
     description: Optional[str]
     datetime: Optional[dt]
-    energy_type: Optional[EnergyCategory]
+    location: Optional[EnergyLocation]
+    energy_category: Optional[EnergyCategory]
     emission_type: Optional[EmissionType]
 
 
 class EnergyCreateSchema(EnergyBaseSchema):
     quantity: float
     datetime: dt
-    energy_type: EnergyCategory
+    location: EnergyLocation
+    energy_category: EnergyCategory
     emission_type: EmissionType
 
 

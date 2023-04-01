@@ -31,7 +31,7 @@ class FuelService:
             logger.error(f"Error while fetching all Fuels, error: {err}")
             return AppError(
                 error_type=ErrorType.DATASOURCE_ERROR,
-                message="DB Error while fetching all Fuels",
+                message="Error while fetching all Fuels",
             )
 
     def create(self, fuel: FuelCreateSchema) -> Union[Fuel, AppError]:

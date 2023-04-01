@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "fastapi-boilerplate"
+name = "hacker-the-future-api"
 version = "0.1.0"
 description = ""
 authors = ["Enmanuel Silva <silvacompte@gmail.com>"]

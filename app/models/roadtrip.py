@@ -3,7 +3,7 @@ from typing import Optional
 
 from sqlmodel import Column, DateTime, Enum, Field
 
-from app.definitions import EmissionType
+from app.definitions import EmissionType, RoadtripGroupType
 from app.models.base import BaseSQLModel
 
 
@@ -12,6 +12,10 @@ class Roadtrip(BaseSQLModel, table=True):
     description: Optional[str] = Field(default=None, nullable=True)
     datetime: dt = Field(
         default=None, sa_column=Column(DateTime(timezone=True), nullable=False)
+    )
+    group: RoadtripGroupType = Field(
+        sa_column=Column(Enum(RoadtripGroupType)),
+        nullable=False,
     )
     emission_type: EmissionType = Field(
         sa_column=Column(Enum(EmissionType)),

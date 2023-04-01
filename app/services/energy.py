@@ -1,10 +1,11 @@
 # isort:skip_file
-from typing import Union
+from typing import Optional, Union
 
 from fastapi import Depends
 from fastapi.encoders import jsonable_encoder
 
 from app.core import get_logger
+from app.definitions.general import EnergyLocation
 from app.models import Energy
 from app.repositories import EnergyRepository
 from app.schemas import EnergyCreateSchema, EnergyUpdateSchema
@@ -112,4 +113,22 @@ class EnergyService:
             return AppError(
                 error_type=ErrorType.DATASOURCE_ERROR,
                 message="Error while deleting Energy",
+            )
+
+    def get_average_monthly_by_location_and_year(
+        self,
+        year: int,
+        location: Optional[EnergyLocation] = EnergyLocation.PLANTA_DE_ENVASADO,
+    ) -> Union[dict, AppError]:
+        try:
+            return self.energy_repository.get_average_monthly_by_location_and_year(
+                year, location
+            )
+        except DatabaseError as err:
+            logger.error(
+                f"DB Error while fetching average monthly Energy by location and year, error: {err}"
+            )
+            return AppError(
+                error_type=ErrorType.DATASOURCE_ERROR,
+                message="Error while fetching average monthly Energy by location and year",
             )

@@ -36,7 +36,7 @@ A well structured codebase written with FastAPI trying to follow the Clean Archi
 │   │   └── settings    # like app settings, logging, etc.
 │   │
 │   ├── infrastructure  # Infrastructure related configs like databases, external resources, etc.
-│   ├── entities        # Database models representation as python classes.
+│   ├── models          # Database models representation as python classes.
 │   ├── repositories    # Collection of classes responsible of databases operations (CRUD).
 │   ├── schemas         # Pydantic schemas for validating data input/output (like `serializers` in Django).
 │   ├── services        # Classes with the business logic, like use cases.

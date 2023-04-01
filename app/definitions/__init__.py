@@ -1,1 +1,9 @@
-from .general import EmissionType, EnergyCategory, FuelType, OilType
+from .general import (
+    EmissionType,
+    EnergyCategory,
+    EnergyLocation,
+    FuelType,
+    OilCategory,
+    OilType,
+    RoadtripGroupType,
+)

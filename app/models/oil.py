@@ -3,7 +3,7 @@ from typing import Optional
 
 from sqlmodel import Column, DateTime, Enum, Field
 
-from app.definitions import EmissionType, OilType
+from app.definitions import EmissionType, OilCategory, OilType
 from app.models.base import BaseSQLModel
 
 
@@ -17,6 +17,12 @@ class Oil(BaseSQLModel, table=True):
         sa_column=Column(Enum(OilType)),
         nullable=False,
     )
+
+    oil_category: OilCategory = Field(
+        sa_column=Column(Enum(OilCategory)),
+        nullable=False,
+    )
+
     emission_type: EmissionType = Field(
         sa_column=Column(Enum(EmissionType)),
         nullable=False,
