@@ -4,10 +4,8 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.admin import init_admin
-from app.api_router import api_router
 from app.core import get_app_settings, get_logger
-from app.infrastructure.db import engine
+from app.routes import api_router
 
 load_dotenv()
 
@@ -48,15 +46,6 @@ def create_app(**kwargs):
     @app.on_event("startup")
     async def startup():
         logger.info("Starting up...")
-        logger.info("Initializing admin...")
-        try:
-            init_admin(app, engine)
-            logger.info("Admin initialized successfully!")
-
-        except Exception as e:
-            logger.error(f"Error when initializing admin, error: {e}")
-            raise e
-        logger.info("Starting up... Done!")
 
     @app.on_event("shutdown")
     async def shutdown():

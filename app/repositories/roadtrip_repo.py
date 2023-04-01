@@ -8,92 +8,92 @@ from sqlmodel import Session, select
 # Local Imports
 from app.core import get_logger
 from app.infrastructure import get_db_session
-from app.students.entities import Student
+from app.models import Roadtrip
 from app.utils.errors import DatabaseError, handle_database_error
 
 logger = get_logger(__name__)
 
 
-class StudentRepository:
+class RoadtripRepository:
     def __init__(self, session: Session = Depends(get_db_session)):
         self.session = session
 
     @handle_database_error
-    def get(self, id: str) -> Union[Student, DatabaseError]:
+    def get(self, id: str) -> Union[Roadtrip, DatabaseError]:
         """
-        Get an Student by id.
+        Get an Roadtrip by id.
 
         Parameters
         ----------
         `id` : str
-            The id of the student to get
+            The id of the roadtrip to get
 
         Returns
         -------
-        `Union[Student, DatabaseError]`
-            The student if found, otherwise an DatabaseError
+        `Union[Roadtrip, DatabaseError]`
+            The roadtrip if found, otherwise an DatabaseError
         """
         try:
-            statement = select(Student).where(Student.id == id)
+            statement = select(Roadtrip).where(Roadtrip.id == id)
             return self.session.exec(statement).first()
         except Exception as err:
-            logger.error(f"Error getting Student, Error: {err}")
+            logger.error(f"Error getting Roadtrip, Error: {err}")
             raise err
 
     @handle_database_error
-    def get_all(self) -> Union[list[Student], DatabaseError]:
+    def get_all(self) -> Union[list[Roadtrip], DatabaseError]:
         """
-        Get all Students.
+        Get all Roadtrips.
 
         Returns
         -------
-        `Union[list[Student], DatabaseError]`
-            A list of students if found, otherwise an DatabaseError
+        `Union[list[Roadtrip], DatabaseError]`
+            A list of roadtrips if found, otherwise an DatabaseError
         """
-        statement = select(Student)
+        statement = select(Roadtrip)
         try:
             return self.session.exec(statement).fetchall()
         except Exception as err:
-            logger.error(f"Error while fetching all Students, error: {err}")
+            logger.error(f"Error while fetching all Roadtrips, error: {err}")
             raise err
 
     @handle_database_error
-    def create(self, student: Student) -> Union[Student, DatabaseError]:
+    def create(self, roadtrip: Roadtrip) -> Union[Roadtrip, DatabaseError]:
         """
-        Create a student
+        Create a roadtrip
 
         Parameters
         ----------
-        `student` : Student
-            The student to create
+        `roadtrip` : Roadtrip
+            The roadtrip to create
 
         Returns
         -------
-        `Union[Student, DatabaseError]`
-            The created Student if successful, otherwise an DatabaseError
+        `Union[Roadtrip, DatabaseError]`
+            The created Roadtrip if successful, otherwise an DatabaseError
         """
 
         try:
-            self.session.add(student)
+            self.session.add(roadtrip)
             self.session.commit()
-            self.session.refresh(student)
-            return student
+            self.session.refresh(roadtrip)
+            return roadtrip
         except Exception as err:
-            logger.error(f"Error while creating Student, error: {err}")
+            logger.error(f"Error while creating Roadtrip, error: {err}")
             self.session.rollback()
             raise err
 
     @handle_database_error
     def bulk_create(
-        self, students: list[Student]
+        self, roadtrips: list[Roadtrip]
     ) -> Union[bool, DatabaseError]:
         """
-        Create multiple students
+        Create multiple roadtrips
 
         Parameters
         ----------
-        `students` : list[Student]
-            The Students to create
+        `roadtrips` : list[Roadtrip]
+            The Roadtrips to create
 
         Returns
         -------
@@ -102,33 +102,33 @@ class StudentRepository:
         """
 
         try:
-            self.session.add_all(students)
+            self.session.add_all(roadtrips)
             self.session.commit()
             return True
         except Exception as err:
-            logger.error(f"Error while creating Students, error: {err}")
+            logger.error(f"Error while creating Roadtrips, error: {err}")
             self.session.rollback()
             raise err
 
     @handle_database_error
-    def update(self, student: Student) -> Union[Student, DatabaseError]:
+    def update(self, roadtrip: Roadtrip) -> Union[Roadtrip, DatabaseError]:
         try:
-            self.session.add(student)
+            self.session.add(roadtrip)
             self.session.commit()
-            self.session.refresh(student)
+            self.session.refresh(roadtrip)
         except Exception as err:
-            logger.error(f"Error while updating Student, error: {err}")
+            logger.error(f"Error while updating Roadtrip, error: {err}")
             self.session.rollback()
             raise err
-        return student
+        return roadtrip
 
     @handle_database_error
-    def delete(self, student: Student) -> Union[bool, DatabaseError]:
+    def delete(self, roadtrip: Roadtrip) -> Union[bool, DatabaseError]:
         try:
-            self.session.delete(student)
+            self.session.delete(roadtrip)
             self.session.commit()
             return True
         except Exception as err:
-            logger.error(f"Error while deleting Student, error: {err}")
+            logger.error(f"Error while deleting Roadtrip, error: {err}")
             self.session.rollback()
             raise err
