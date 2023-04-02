@@ -1,10 +1,4 @@
-<h1 align="center">fastapi-boilerplate</h1>
-
-A well structured codebase written with FastAPI trying to follow the Clean Architecture principles.
-
-*For more information about Clean Architecture, you can check the [documentation](https://prog.world/clean-architecture-through-the-eyes-of-a-python-developer/)*
-
-*P.D: This is a modified version of the [FastAPI Clean Architecture](https://github.com/0xTheProDev/fastapi-clean-example) project, but with some changes to fit the needs of every developer*
+<h1 align="center">Hack The Future API</h1>
 
 ## Table of Content 📑
 ---
