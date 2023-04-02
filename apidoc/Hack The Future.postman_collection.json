@@ -1,0 +1,2388 @@
+{
+	"info": {
+		"_postman_id": "6067b93c-216f-44e5-a20e-ad719a8c5a48",
+		"name": "Hack The Future",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20377685"
+	},
+	"item": [
+		{
+			"name": "Fuel",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/fuel/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"fuel",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:50:57 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "14091"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 71,\n        \"created_at\": \"2023-04-01T18:30:27.230061+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 500,\n        \"description\": null,\n        \"datetime\": \"2023-01-15T13:00:00+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 72,\n        \"created_at\": \"2023-04-01T18:30:44.144209+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 750,\n        \"description\": null,\n        \"datetime\": \"2023-01-15T13:00:00+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 73,\n        \"created_at\": \"2023-04-01T18:31:03.847431+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 1250,\n        \"description\": null,\n        \"datetime\": \"2023-01-15T13:00:00+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 74,\n        \"created_at\": \"2023-04-01T18:39:51.417677+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 492,\n        \"description\": null,\n        \"datetime\": \"2023-03-28T08:06:19+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 75,\n        \"created_at\": \"2023-04-01T18:39:51.417677+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 256,\n        \"description\": null,\n        \"datetime\": \"2023-03-15T04:17:47+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 76,\n        \"created_at\": \"2023-04-01T18:39:51.417677+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 748,\n        \"description\": null,\n        \"datetime\": \"2023-03-13T14:07:07+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 77,\n        \"created_at\": \"2023-04-01T18:39:51.417677+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 136,\n        \"description\": null,\n        \"datetime\": \"2023-03-03T16:09:27+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 78,\n        \"created_at\": \"2023-04-01T18:39:51.417677+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 757,\n        \"description\": null,\n        \"datetime\": \"2023-03-30T10:05:35+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 79,\n        \"created_at\": \"2023-04-01T18:40:04.820070+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 149,\n        \"description\": null,\n        \"datetime\": \"2023-04-20T01:46:29+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 80,\n        \"created_at\": \"2023-04-01T18:40:04.820070+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 902,\n        \"description\": null,\n        \"datetime\": \"2023-04-17T09:40:17+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 81,\n        \"created_at\": \"2023-04-01T18:40:04.820070+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 799,\n        \"description\": null,\n        \"datetime\": \"2023-04-01T14:20:37+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 82,\n        \"created_at\": \"2023-04-01T18:40:04.820070+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 825,\n        \"description\": null,\n        \"datetime\": \"2023-04-27T10:22:21+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 83,\n        \"created_at\": \"2023-04-01T18:40:04.820070+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 596,\n        \"description\": null,\n        \"datetime\": \"2023-04-02T03:43:22+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 84,\n        \"created_at\": \"2023-04-01T18:40:21.388716+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 279,\n        \"description\": null,\n        \"datetime\": \"2023-05-13T22:22:17+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 85,\n        \"created_at\": \"2023-04-01T18:40:21.388716+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 951,\n        \"description\": null,\n        \"datetime\": \"2023-05-24T21:09:00+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 86,\n        \"created_at\": \"2023-04-01T18:40:21.388716+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 697,\n        \"description\": null,\n        \"datetime\": \"2023-05-21T10:32:37+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 87,\n        \"created_at\": \"2023-04-01T18:40:21.388716+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 147,\n        \"description\": null,\n        \"datetime\": \"2023-05-01T02:03:31+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 88,\n        \"created_at\": \"2023-04-01T18:40:21.388716+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 199,\n        \"description\": null,\n        \"datetime\": \"2023-05-19T21:58:28+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 89,\n        \"created_at\": \"2023-04-01T18:40:57.180437+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 585,\n        \"description\": null,\n        \"datetime\": \"2023-06-16T18:56:22+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 90,\n        \"created_at\": \"2023-04-01T18:40:57.180437+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 751,\n        \"description\": null,\n        \"datetime\": \"2023-06-09T06:19:01+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 91,\n        \"created_at\": \"2023-04-01T18:40:57.180437+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 563,\n        \"description\": null,\n        \"datetime\": \"2023-06-06T10:28:58+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 92,\n        \"created_at\": \"2023-04-01T18:40:57.180437+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 734,\n        \"description\": null,\n        \"datetime\": \"2023-06-01T09:59:39+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 93,\n        \"created_at\": \"2023-04-01T18:40:57.180437+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 921,\n        \"description\": null,\n        \"datetime\": \"2023-06-05T02:24:37+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 94,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 504,\n        \"description\": null,\n        \"datetime\": \"2023-07-18T03:52:47+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 95,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 194,\n        \"description\": null,\n        \"datetime\": \"2023-07-03T09:11:36+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 96,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 289,\n        \"description\": null,\n        \"datetime\": \"2023-07-02T07:53:48+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 97,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 547,\n        \"description\": null,\n        \"datetime\": \"2023-07-24T04:51:32+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 98,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 711,\n        \"description\": null,\n        \"datetime\": \"2023-07-21T20:42:25+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 99,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 330,\n        \"description\": null,\n        \"datetime\": \"2023-07-16T15:15:50+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 100,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 535,\n        \"description\": null,\n        \"datetime\": \"2023-07-03T22:08:26+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 101,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 237,\n        \"description\": null,\n        \"datetime\": \"2023-07-15T06:39:36+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 102,\n        \"created_at\": \"2023-04-01T18:41:45.192111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 345,\n        \"description\": null,\n        \"datetime\": \"2023-07-06T15:54:53+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 103,\n        \"created_at\": \"2023-04-01T18:42:04.163746+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 961,\n        \"description\": null,\n        \"datetime\": \"2023-08-14T04:15:13+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 104,\n        \"created_at\": \"2023-04-01T18:42:04.163746+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 290,\n        \"description\": null,\n        \"datetime\": \"2023-08-30T11:36:12+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 105,\n        \"created_at\": \"2023-04-01T18:42:04.163746+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 858,\n        \"description\": null,\n        \"datetime\": \"2023-08-20T04:53:17+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 106,\n        \"created_at\": \"2023-04-01T18:42:04.163746+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 873,\n        \"description\": null,\n        \"datetime\": \"2023-08-16T02:47:23+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 107,\n        \"created_at\": \"2023-04-01T18:42:04.163746+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 736,\n        \"description\": null,\n        \"datetime\": \"2023-08-23T14:37:27+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 108,\n        \"created_at\": \"2023-04-01T18:42:04.163746+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 160,\n        \"description\": null,\n        \"datetime\": \"2023-08-08T06:45:52+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 109,\n        \"created_at\": \"2023-04-01T18:42:04.163746+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 871,\n        \"description\": null,\n        \"datetime\": \"2023-08-09T14:23:40+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 110,\n        \"created_at\": \"2023-04-01T18:42:04.163746+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 422,\n        \"description\": null,\n        \"datetime\": \"2023-08-08T13:38:25+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 111,\n        \"created_at\": \"2023-04-01T18:42:20.572623+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 658,\n        \"description\": null,\n        \"datetime\": \"2023-09-07T14:35:26+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 112,\n        \"created_at\": \"2023-04-01T18:42:20.572623+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 836,\n        \"description\": null,\n        \"datetime\": \"2023-09-07T02:02:36+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 113,\n        \"created_at\": \"2023-04-01T18:42:20.572623+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 705,\n        \"description\": null,\n        \"datetime\": \"2023-09-05T10:08:12+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 114,\n        \"created_at\": \"2023-04-01T18:42:20.572623+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 513,\n        \"description\": null,\n        \"datetime\": \"2023-09-20T13:51:25+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 115,\n        \"created_at\": \"2023-04-01T18:42:37.248364+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 629,\n        \"description\": null,\n        \"datetime\": \"2023-10-15T23:49:41+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 116,\n        \"created_at\": \"2023-04-01T18:42:37.248364+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 846,\n        \"description\": null,\n        \"datetime\": \"2023-10-16T07:57:47+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 117,\n        \"created_at\": \"2023-04-01T18:42:37.248364+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 165,\n        \"description\": null,\n        \"datetime\": \"2023-10-13T22:22:35+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 118,\n        \"created_at\": \"2023-04-01T18:42:37.248364+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 206,\n        \"description\": null,\n        \"datetime\": \"2023-10-17T12:36:40+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 119,\n        \"created_at\": \"2023-04-01T18:42:55.179377+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 610,\n        \"description\": null,\n        \"datetime\": \"2023-11-27T22:02:02+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 120,\n        \"created_at\": \"2023-04-01T18:42:55.179377+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 603,\n        \"description\": null,\n        \"datetime\": \"2023-11-16T22:26:01+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 121,\n        \"created_at\": \"2023-04-01T18:42:55.179377+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 510,\n        \"description\": null,\n        \"datetime\": \"2023-11-22T11:29:23+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 122,\n        \"created_at\": \"2023-04-01T18:42:55.179377+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 214,\n        \"description\": null,\n        \"datetime\": \"2023-11-15T05:10:46+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 123,\n        \"created_at\": \"2023-04-01T18:42:55.179377+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 837,\n        \"description\": null,\n        \"datetime\": \"2023-11-03T04:46:38+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 124,\n        \"created_at\": \"2023-04-01T18:42:55.179377+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 319,\n        \"description\": null,\n        \"datetime\": \"2023-11-04T11:50:40+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 125,\n        \"created_at\": \"2023-04-01T18:43:24.711692+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 811,\n        \"description\": null,\n        \"datetime\": \"2023-12-14T07:24:54+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 126,\n        \"created_at\": \"2023-04-01T18:43:24.711692+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 512,\n        \"description\": null,\n        \"datetime\": \"2023-12-10T04:49:39+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 127,\n        \"created_at\": \"2023-04-01T18:43:24.711692+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 703,\n        \"description\": null,\n        \"datetime\": \"2023-12-19T11:23:53+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 128,\n        \"created_at\": \"2023-04-01T18:43:24.711692+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 533,\n        \"description\": null,\n        \"datetime\": \"2023-12-10T01:11:58+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 129,\n        \"created_at\": \"2023-04-01T18:43:24.711692+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 891,\n        \"description\": null,\n        \"datetime\": \"2023-12-29T14:24:16+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE DE LOGISTICA\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 130,\n        \"created_at\": \"2023-04-01T18:43:24.711692+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 160,\n        \"description\": null,\n        \"datetime\": \"2023-12-18T00:38:22+00:00\",\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    }\n]"
+						},
+						{
+							"name": "200 - OK Empty Array",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:50:57 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "14091"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "500 - DataSource Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:50:57 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "14091"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"detail\": \"Error while fetching all Fuels\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Consumo Anual Por Categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/fuel/consumo_anual_por_categoria/?year=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"fuel",
+								"consumo_anual_por_categoria",
+								""
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/consumo_anual_por_categoria/?year=2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"consumo_anual_por_categoria",
+										""
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2023"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:52:15 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "124"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"COMBUSTIBLE ADMINISTRATIVO\": 0.35,\n        \"COMBUSTIBLE DE LOGISTICA\": 0.34,\n        \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\": 0.31\n    }\n}"
+						},
+						{
+							"name": "400 - Year Range",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/consumo_anual_por_categoria/?year=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"consumo_anual_por_categoria",
+										""
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:57:12 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "47"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Year must be between 1900 and 2023\"\n}"
+						},
+						{
+							"name": "422 - Invalid Year Type",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/consumo_anual_por_categoria/?year=null",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"consumo_anual_por_categoria",
+										""
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:56:29 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "102"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": [\n        {\n            \"loc\": [\n                \"query\",\n                \"year\"\n            ],\n            \"msg\": \"value is not a valid integer\",\n            \"type\": \"type_error.integer\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Consumo Promedio Mensual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/fuel/consumo_promedio_mensual/?year=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"fuel",
+								"consumo_promedio_mensual",
+								""
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/consumo_promedio_mensual/?year=2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"consumo_promedio_mensual",
+										""
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2023"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 23:03:08 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "16"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": 566.05\n}"
+						},
+						{
+							"name": "400 - Year Range Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/consumo_promedio_mensual/?year=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"consumo_promedio_mensual",
+										""
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:57:12 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "47"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Year must be between 1900 and 2023\"\n}"
+						},
+						{
+							"name": "422 - Invalid Year Type Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/consumo_promedio_mensual/?year=null",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"consumo_promedio_mensual",
+										""
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:56:29 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "102"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": [\n        {\n            \"loc\": [\n                \"query\",\n                \"year\"\n            ],\n            \"msg\": \"value is not a valid integer\",\n            \"type\": \"type_error.integer\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Segmento Mas Impactante Porcentaje",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/fuel/porcentaje_por_segmento_anual/?year=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"fuel",
+								"porcentaje_por_segmento_anual",
+								""
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Meses - Min y Max Consumo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/fuel/min_max_consumo_meses?year=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"fuel",
+								"min_max_consumo_meses"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/min_max_consumo_meses?year=2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"min_max_consumo_meses"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2023"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 02 Apr 2023 03:36:21 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "52"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"lowest\": \"October\",\n        \"highest\": \"August\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 750,\r\n  \"datetime\": \"2023-04-01 01:00:00\",\r\n  \"fuel_type\": \"COMBUSTIBLE x\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/fuel/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"fuel",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quantity\": 750,\r\n  \"datetime\": \"2023-04-01 01:00:00\",\r\n  \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:59:42 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "229"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 131,\n    \"created_at\": \"2023-04-01T20:59:47.157855+00:00\",\n    \"updated_at\": null,\n    \"quantity\": 750,\n    \"description\": null,\n    \"datetime\": \"2023-04-01T01:00:00+00:00\",\n    \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\n    \"emission_type\": \"EMISIONES DIRECTAS\"\n}"
+						},
+						{
+							"name": "422 - Invalid Emission Type",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quantity\": 750,\r\n  \"datetime\": \"2023-04-01 01:00:00\",\r\n  \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES x\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										""
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 20:59:57 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "302"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": [\n        {\n            \"loc\": [\n                \"body\",\n                \"emission_type\"\n            ],\n            \"msg\": \"value is not a valid enumeration member; permitted: 'EMISIONES DIRECTAS', 'EMISIONES INDIRECTAS', 'OTRAS EMISIONES INDIRECTAS'\",\n            \"type\": \"type_error.enum\",\n            \"ctx\": {\n                \"enum_values\": [\n                    \"EMISIONES DIRECTAS\",\n                    \"EMISIONES INDIRECTAS\",\n                    \"OTRAS EMISIONES INDIRECTAS\"\n                ]\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "422 - Invalid Fuel Type",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quantity\": 750,\r\n  \"datetime\": \"2023-04-01 01:00:00\",\r\n  \"fuel_type\": \"COMBUSTIBLE x\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										""
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 21:00:25 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "338"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": [\n        {\n            \"loc\": [\n                \"body\",\n                \"fuel_type\"\n            ],\n            \"msg\": \"value is not a valid enumeration member; permitted: 'COMBUSTIBLE ADMINISTRATIVO', 'COMBUSTIBLE INDIRECTO DE PROVEEDOR', 'COMBUSTIBLE DE LOGISTICA'\",\n            \"type\": \"type_error.enum\",\n            \"ctx\": {\n                \"enum_values\": [\n                    \"COMBUSTIBLE ADMINISTRATIVO\",\n                    \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n                    \"COMBUSTIBLE DE LOGISTICA\"\n                ]\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Bulk Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"quantity\": 750,\r\n        \"datetime\": \"2023-04-01 01:00:00\",\r\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\r\n        \"emission_type\": \"EMISIONES DIRECTAS\"\r\n    },\r\n    {\r\n        \"quantity\": 200,\r\n        \"datetime\": \"2023-04-11 11:05:30\",\r\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\r\n        \"emission_type\": \"EMISIONES DIRECTAS\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/fuel/bulk_create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"fuel",
+								"bulk_create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"quantity\": 750,\r\n        \"datetime\": \"2023-04-01 01:00:00\",\r\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\r\n        \"emission_type\": \"EMISIONES DIRECTAS\"\r\n    },\r\n    {\r\n        \"quantity\": 200,\r\n        \"datetime\": \"2023-04-11 11:05:30\",\r\n        \"fuel_type\": \"COMBUSTIBLE ADMINISTRATIVO\",\r\n        \"emission_type\": \"EMISIONES DIRECTAS\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/bulk_create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"bulk_create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 22:09:36 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "37"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"Fuels created succesfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Fuel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 350\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/fuel/71",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"fuel",
+								"71"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quantity\": 350\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/71",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"71"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 22:10:43 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "266"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 71,\n    \"created_at\": \"2023-04-01T18:30:27.230061+00:00\",\n    \"updated_at\": \"2023-04-01T22:10:47.058791+00:00\",\n    \"quantity\": 350,\n    \"description\": null,\n    \"datetime\": \"2023-01-15T13:00:00+00:00\",\n    \"fuel_type\": \"COMBUSTIBLE INDIRECTO DE PROVEEDOR\",\n    \"emission_type\": \"EMISIONES DIRECTAS\"\n}"
+						},
+						{
+							"name": "404 - Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quantity\": 350\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/fuel/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"fuel",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 22:11:05 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "27"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Fuel not found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Energy",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/energy/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"energy",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consumo Promedio Mensual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/energy/consumo_promedio_mensual/?year=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"energy",
+								"consumo_promedio_mensual",
+								""
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/energy/consumo_promedio_mensual/?year=2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"energy",
+										"consumo_promedio_mensual",
+										""
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2023"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 23:02:51 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "15"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": 793\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 900,\r\n  \"datetime\": \"2023-01-20 01:01:01\",\r\n  \"location\": \"PLANTA DE ENVASADO\",\r\n  \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/energy/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"energy",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quantity\": 300,\r\n  \"datetime\": \"2023-01-01 01:01:01\",\r\n  \"location\": \"OFICINAS ADMINISTRATIVAS\",\r\n  \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/energy/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"energy",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 21:11:21 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "269"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"created_at\": \"2023-04-01T21:11:25.405182+00:00\",\n    \"updated_at\": null,\n    \"quantity\": 300,\n    \"description\": null,\n    \"datetime\": \"2023-01-01T01:01:01+00:00\",\n    \"location\": \"OFICINAS ADMINISTRATIVAS\",\n    \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\n    \"emission_type\": \"EMISIONES INDIRECTAS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Bulk Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n  \"quantity\": 1242,\r\n  \"datetime\": \"2023-03-17T21:44:09Z\",\r\n  \"location\": \"OFICINAS ADMINISTRATIVAS\",\r\n  \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 453,\r\n  \"datetime\": \"2023-03-08T23:04:42Z\",\r\n  \"location\": \"PLANTA DE ENVASADO\",\r\n  \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 875,\r\n  \"datetime\": \"2023-03-10T23:04:34Z\",\r\n  \"location\": \"LOCAL\",\r\n  \"energy_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 1509,\r\n  \"datetime\": \"2023-03-06T23:20:50Z\",\r\n  \"location\": \"OFICINAS ADMINISTRATIVAS\",\r\n  \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/energy/bulk_create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"energy",
+								"bulk_create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\r\n  \"quantity\": 1242,\r\n  \"datetime\": \"2023-03-17 21:44:09\",\r\n  \"location\": \"OFICINAS ADMINISTRATIVAS\",\r\n  \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 453,\r\n  \"datetime\": \"2023-03-17 21:44:09\",\r\n  \"location\": \"PLANTA DE ENVASADO\",\r\n  \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 875,\r\n  \"datetime\": \"2023-03-17 21:44:09\",\r\n  \"location\": \"LOCAL\",\r\n  \"energy_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 1509,\r\n  \"datetime\": \"2023-03-17 21:44:09\",\r\n  \"location\": \"OFICINAS ADMINISTRATIVAS\",\r\n  \"energy_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES INDIRECTAS\"\r\n}]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/energy/bulk_create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"energy",
+										"bulk_create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 21:19:44 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "39"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"Energys created succesfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Roadtrip",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/roadtrip/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roadtrip",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/roadtrip/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"roadtrip",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 22:15:22 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "216"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"created_at\": \"2023-04-01T22:14:54.866364+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 3,\n        \"description\": null,\n        \"datetime\": \"2023-01-01T16:30:00+00:00\",\n        \"group\": \"EQUIPO ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Comparativa Promedio Mensual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/roadtrip/comparativa_promedio_mensual?year=2021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roadtrip",
+								"comparativa_promedio_mensual"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2021"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/roadtrip/comparativa_promedio_mensual?year=2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"roadtrip",
+										"comparativa_promedio_mensual"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2023"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 02 Apr 2023 03:40:07 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "61"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"EQUIPO DE VENTAS\": 9,\n        \"EQUIPO ADMINISTRATIVO\": 9\n    }\n}"
+						},
+						{
+							"name": "200 - Empty Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/roadtrip/comparativa_promedio_mensual?year=2021",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"roadtrip",
+										"comparativa_promedio_mensual"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2021"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 02 Apr 2023 03:40:19 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "61"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"EQUIPO ADMINISTRATIVO\": 0,\n        \"EQUIPO DE VENTAS\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 2,\r\n  \"datetime\": \"2023-01-22 10:47:43\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/roadtrip/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roadtrip",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quantity\": 2,\r\n  \"datetime\": \"2023-01-22 10:47:43\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/roadtrip/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"roadtrip",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 22:18:01 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "209"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"created_at\": \"2023-04-01T22:18:04.019437+00:00\",\n    \"updated_at\": null,\n    \"quantity\": 2,\n    \"description\": null,\n    \"datetime\": \"2023-01-22T10:47:43+00:00\",\n    \"group\": \"EQUIPO DE VENTAS\",\n    \"emission_type\": \"EMISIONES DIRECTAS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Bulk Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-08-16T09:33:15Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-05-28T00:02:40Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-10-15T10:11:48Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-07-10T14:59:56Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-11-05T05:02:11Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-02-15T00:19:22Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-04-06T11:13:07Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-05-15T16:40:50Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-07-18T16:35:09Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-04-01T06:27:40Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-05-10T00:27:51Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-09-11T01:30:33Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-10-13T03:15:51Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-04-21T05:16:09Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-08-04T20:27:37Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-11-06T16:32:47Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-09-13T01:10:55Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-03-17T09:34:54Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-08-01T21:24:22Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-12-23T17:34:34Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-03-16T10:17:10Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-08-01T02:10:41Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-04-19T11:23:52Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-06-20T18:49:49Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-12-24T21:56:53Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-04-12T16:18:48Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 2,\r\n  \"datetime\": \"2023-09-06T19:28:04Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-12-05T15:18:45Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 2,\r\n  \"datetime\": \"2023-02-04T04:50:58Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-06-29T19:22:31Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-10-11T11:25:06Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-06-30T23:37:43Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-10-29T01:28:07Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-04-11T19:32:12Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-06-17T06:05:46Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-11-04T21:14:59Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-03-06T10:24:54Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-07-17T19:37:20Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-06-28T03:40:08Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-10-02T14:03:18Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-05-07T07:00:01Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-11-22T19:29:02Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-12-05T05:18:06Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-12-07T15:42:04Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 2,\r\n  \"datetime\": \"2023-07-20T15:05:07Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-09-12T21:08:49Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-10-25T03:19:27Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-09-27T16:21:16Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-04-18T08:41:16Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-04-05T19:25:02Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/roadtrip/bulk_create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roadtrip",
+								"bulk_create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-08-16T09:33:15Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-05-28T00:02:40Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-10-15T10:11:48Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-07-10T14:59:56Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-11-05T05:02:11Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-02-15T00:19:22Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-04-06T11:13:07Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-05-15T16:40:50Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-07-18T16:35:09Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-04-01T06:27:40Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-05-10T00:27:51Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-09-11T01:30:33Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-10-13T03:15:51Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-04-21T05:16:09Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-08-04T20:27:37Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-11-06T16:32:47Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-09-13T01:10:55Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-03-17T09:34:54Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-08-01T21:24:22Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-12-23T17:34:34Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-03-16T10:17:10Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-08-01T02:10:41Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-04-19T11:23:52Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-06-20T18:49:49Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-12-24T21:56:53Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-04-12T16:18:48Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 2,\r\n  \"datetime\": \"2023-09-06T19:28:04Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-12-05T15:18:45Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 2,\r\n  \"datetime\": \"2023-02-04T04:50:58Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-06-29T19:22:31Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-10-11T11:25:06Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-06-30T23:37:43Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-10-29T01:28:07Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-04-11T19:32:12Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-06-17T06:05:46Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-11-04T21:14:59Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-03-06T10:24:54Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-07-17T19:37:20Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-06-28T03:40:08Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-10-02T14:03:18Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-05-07T07:00:01Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-11-22T19:29:02Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-12-05T05:18:06Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 4,\r\n  \"datetime\": \"2023-12-07T15:42:04Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 2,\r\n  \"datetime\": \"2023-07-20T15:05:07Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-09-12T21:08:49Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-10-25T03:19:27Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 5,\r\n  \"datetime\": \"2023-09-27T16:21:16Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 7,\r\n  \"datetime\": \"2023-04-18T08:41:16Z\",\r\n  \"group\": \"EQUIPO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-04-05T19:25:02Z\",\r\n  \"group\": \"EQUIPO DE VENTAS\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/roadtrip/bulk_create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"roadtrip",
+										"bulk_create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 22:20:40 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "41"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"Roadtrips created succesfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Oil",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/oil",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"oil"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/oil",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"oil"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 22:49:29 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "9595"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"created_at\": \"2023-04-01T22:41:35.446620+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 3,\n        \"description\": null,\n        \"datetime\": \"2023-01-01T22:39:23.886000+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 2,\n        \"created_at\": \"2023-04-01T22:42:01.697328+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 30,\n        \"description\": null,\n        \"datetime\": \"2023-01-30T22:39:23.886000+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 3,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 34,\n        \"description\": null,\n        \"datetime\": \"2023-06-11T07:31:52+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO DE OPERACION\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 4,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 13,\n        \"description\": null,\n        \"datetime\": \"2023-09-27T05:39:23+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO DE OPERACION\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 5,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 28,\n        \"description\": null,\n        \"datetime\": \"2023-07-17T20:03:52+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 6,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 11,\n        \"description\": null,\n        \"datetime\": \"2023-06-05T05:43:58+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 7,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 38,\n        \"description\": null,\n        \"datetime\": \"2023-04-25T18:07:00+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 8,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 40,\n        \"description\": null,\n        \"datetime\": \"2023-06-01T02:41:52+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO DE OPERACION\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 9,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 19,\n        \"description\": null,\n        \"datetime\": \"2023-11-16T19:54:42+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 10,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 31,\n        \"description\": null,\n        \"datetime\": \"2023-10-27T01:29:54+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 11,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 19,\n        \"description\": null,\n        \"datetime\": \"2023-04-11T10:27:43+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 12,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 22,\n        \"description\": null,\n        \"datetime\": \"2023-12-11T17:56:12+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 13,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 33,\n        \"description\": null,\n        \"datetime\": \"2023-10-22T15:03:03+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 14,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 47,\n        \"description\": null,\n        \"datetime\": \"2023-11-14T15:26:17+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 15,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 25,\n        \"description\": null,\n        \"datetime\": \"2023-04-12T05:48:07+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 16,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 29,\n        \"description\": null,\n        \"datetime\": \"2023-06-23T00:00:15+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 17,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 40,\n        \"description\": null,\n        \"datetime\": \"2023-03-10T17:22:45+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 18,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 31,\n        \"description\": null,\n        \"datetime\": \"2023-12-29T12:08:54+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 19,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 40,\n        \"description\": null,\n        \"datetime\": \"2023-04-03T21:03:24+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 20,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 1,\n        \"description\": null,\n        \"datetime\": \"2023-07-01T13:24:46+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 21,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 49,\n        \"description\": null,\n        \"datetime\": \"2023-08-18T04:10:26+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO DE OPERACION\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 22,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 3,\n        \"description\": null,\n        \"datetime\": \"2023-07-24T21:07:19+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 23,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 29,\n        \"description\": null,\n        \"datetime\": \"2023-07-23T00:51:19+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 24,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 47,\n        \"description\": null,\n        \"datetime\": \"2023-02-03T20:17:13+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 25,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 18,\n        \"description\": null,\n        \"datetime\": \"2023-11-09T12:09:38+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 26,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 1,\n        \"description\": null,\n        \"datetime\": \"2023-09-18T07:00:22+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 27,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 48,\n        \"description\": null,\n        \"datetime\": \"2023-10-19T18:59:00+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 28,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 48,\n        \"description\": null,\n        \"datetime\": \"2023-03-28T10:51:53+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 29,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 40,\n        \"description\": null,\n        \"datetime\": \"2023-12-12T18:58:15+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO DE OPERACION\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 30,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 45,\n        \"description\": null,\n        \"datetime\": \"2023-05-30T14:32:03+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 31,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 13,\n        \"description\": null,\n        \"datetime\": \"2023-03-29T19:31:37+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO DE OPERACION\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 32,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 40,\n        \"description\": null,\n        \"datetime\": \"2023-02-17T09:26:14+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    },\n    {\n        \"id\": 33,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 3,\n        \"description\": null,\n        \"datetime\": \"2023-07-21T18:15:51+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 34,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 6,\n        \"description\": null,\n        \"datetime\": \"2023-12-30T03:55:35+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO DE OPERACION\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 35,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 28,\n        \"description\": null,\n        \"datetime\": \"2023-08-09T12:23:57+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO DE OPERACION\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 36,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 19,\n        \"description\": null,\n        \"datetime\": \"2023-07-02T07:01:27+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 37,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 39,\n        \"description\": null,\n        \"datetime\": \"2023-11-29T10:20:48+00:00\",\n        \"oil_type\": \"REFRIGERANTE\",\n        \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\n        \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\n    },\n    {\n        \"id\": 38,\n        \"created_at\": \"2023-04-01T22:49:24.757111+00:00\",\n        \"updated_at\": null,\n        \"quantity\": 32,\n        \"description\": null,\n        \"datetime\": \"2023-03-04T13:16:23+00:00\",\n        \"oil_type\": \"ACEITE\",\n        \"oil_category\": \"CONSUMO LOGISTICO\",\n        \"emission_type\": \"EMISIONES DIRECTAS\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Consumo Promedio Mensual Aceite",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/oil/consumo_mensual_aceite?year=2021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"oil",
+								"consumo_mensual_aceite"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2021"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/oil/consumo_mensual_aceite?year=2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"oil",
+										"consumo_mensual_aceite"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2023"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 02 Apr 2023 03:37:11 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "131"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"1\": 0,\n        \"2\": 0,\n        \"3\": 133,\n        \"4\": 84,\n        \"5\": 0,\n        \"6\": 85,\n        \"7\": 0,\n        \"8\": 0,\n        \"9\": 14,\n        \"10\": 48,\n        \"11\": 18,\n        \"12\": 22\n    }\n}"
+						},
+						{
+							"name": "200 - Empty Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/oil/consumo_mensual_aceite?year=2021",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"oil",
+										"consumo_mensual_aceite"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2021"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 02 Apr 2023 03:37:41 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "109"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"1\": 0,\n        \"2\": 0,\n        \"3\": 0,\n        \"4\": 0,\n        \"5\": 0,\n        \"6\": 0,\n        \"7\": 0,\n        \"8\": 0,\n        \"9\": 0,\n        \"10\": 0,\n        \"11\": 0,\n        \"12\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Mes - Menos Perdida Refrigerante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/oil/mes_menos_perdida_refrigerante?year=2020",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"oil",
+								"mes_menos_perdida_refrigerante"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/oil/mes_menos_perdida_refrigerante?year=2023",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"oil",
+										"mes_menos_perdida_refrigerante"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2023"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 02 Apr 2023 03:38:38 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "19"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"January\"\n}"
+						},
+						{
+							"name": "404 - Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/oil/mes_menos_perdida_refrigerante?year=2020",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"oil",
+										"mes_menos_perdida_refrigerante"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2020"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 02 Apr 2023 03:38:50 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "50"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Min loss not found for requested year\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Bulk Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n  \"quantity\": 34,\r\n  \"datetime\": \"2023-06-11T07:31:52Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 13,\r\n  \"datetime\": \"2023-09-27T05:39:23Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 28,\r\n  \"datetime\": \"2023-07-17T20:03:52Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 11,\r\n  \"datetime\": \"2023-06-05T05:43:58Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 38,\r\n  \"datetime\": \"2023-04-25T18:07:00Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-06-01T02:41:52Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 19,\r\n  \"datetime\": \"2023-11-16T19:54:42Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 31,\r\n  \"datetime\": \"2023-10-27T01:29:54Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 19,\r\n  \"datetime\": \"2023-04-11T10:27:43Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 22,\r\n  \"datetime\": \"2023-12-11T17:56:12Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 33,\r\n  \"datetime\": \"2023-10-22T15:03:03Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 47,\r\n  \"datetime\": \"2023-11-14T15:26:17Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 25,\r\n  \"datetime\": \"2023-04-12T05:48:07Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 29,\r\n  \"datetime\": \"2023-06-23T00:00:15Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-03-10T17:22:45Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 31,\r\n  \"datetime\": \"2023-12-29T12:08:54Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-04-03T21:03:24Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-07-01T13:24:46Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 49,\r\n  \"datetime\": \"2023-08-18T04:10:26Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-07-24T21:07:19Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 29,\r\n  \"datetime\": \"2023-07-23T00:51:19Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 47,\r\n  \"datetime\": \"2023-02-03T20:17:13Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 18,\r\n  \"datetime\": \"2023-11-09T12:09:38Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-09-18T07:00:22Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 48,\r\n  \"datetime\": \"2023-10-19T18:59:00Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 48,\r\n  \"datetime\": \"2023-03-28T10:51:53Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-12-12T18:58:15Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 45,\r\n  \"datetime\": \"2023-05-30T14:32:03Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 13,\r\n  \"datetime\": \"2023-03-29T19:31:37Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-02-17T09:26:14Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-07-21T18:15:51Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-12-30T03:55:35Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 28,\r\n  \"datetime\": \"2023-08-09T12:23:57Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 19,\r\n  \"datetime\": \"2023-07-02T07:01:27Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 39,\r\n  \"datetime\": \"2023-11-29T10:20:48Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 32,\r\n  \"datetime\": \"2023-03-04T13:16:23Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/oil/bulk_create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"oil",
+								"bulk_create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\r\n  \"quantity\": 34,\r\n  \"datetime\": \"2023-06-11T07:31:52Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 13,\r\n  \"datetime\": \"2023-09-27T05:39:23Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 28,\r\n  \"datetime\": \"2023-07-17T20:03:52Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 11,\r\n  \"datetime\": \"2023-06-05T05:43:58Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 38,\r\n  \"datetime\": \"2023-04-25T18:07:00Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-06-01T02:41:52Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 19,\r\n  \"datetime\": \"2023-11-16T19:54:42Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 31,\r\n  \"datetime\": \"2023-10-27T01:29:54Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 19,\r\n  \"datetime\": \"2023-04-11T10:27:43Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 22,\r\n  \"datetime\": \"2023-12-11T17:56:12Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 33,\r\n  \"datetime\": \"2023-10-22T15:03:03Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 47,\r\n  \"datetime\": \"2023-11-14T15:26:17Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 25,\r\n  \"datetime\": \"2023-04-12T05:48:07Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 29,\r\n  \"datetime\": \"2023-06-23T00:00:15Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-03-10T17:22:45Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 31,\r\n  \"datetime\": \"2023-12-29T12:08:54Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-04-03T21:03:24Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-07-01T13:24:46Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 49,\r\n  \"datetime\": \"2023-08-18T04:10:26Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-07-24T21:07:19Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 29,\r\n  \"datetime\": \"2023-07-23T00:51:19Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 47,\r\n  \"datetime\": \"2023-02-03T20:17:13Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 18,\r\n  \"datetime\": \"2023-11-09T12:09:38Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 1,\r\n  \"datetime\": \"2023-09-18T07:00:22Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 48,\r\n  \"datetime\": \"2023-10-19T18:59:00Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 48,\r\n  \"datetime\": \"2023-03-28T10:51:53Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-12-12T18:58:15Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 45,\r\n  \"datetime\": \"2023-05-30T14:32:03Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 13,\r\n  \"datetime\": \"2023-03-29T19:31:37Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 40,\r\n  \"datetime\": \"2023-02-17T09:26:14Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}, {\r\n  \"quantity\": 3,\r\n  \"datetime\": \"2023-07-21T18:15:51Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 6,\r\n  \"datetime\": \"2023-12-30T03:55:35Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 28,\r\n  \"datetime\": \"2023-08-09T12:23:57Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO DE OPERACION\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 19,\r\n  \"datetime\": \"2023-07-02T07:01:27Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 39,\r\n  \"datetime\": \"2023-11-29T10:20:48Z\",\r\n  \"oil_type\": \"REFRIGERANTE\",\r\n  \"oil_category\": \"CONSUMO ADMINISTRATIVO\",\r\n  \"emission_type\": \"OTRAS EMISIONES INDIRECTAS\"\r\n}, {\r\n  \"quantity\": 32,\r\n  \"datetime\": \"2023-03-04T13:16:23Z\",\r\n  \"oil_type\": \"ACEITE\",\r\n  \"oil_category\": \"CONSUMO LOGISTICO\",\r\n  \"emission_type\": \"EMISIONES DIRECTAS\"\r\n}]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/oil/bulk_create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"oil",
+										"bulk_create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sat, 01 Apr 2023 22:48:08 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "36"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"Oils created succesfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comparativa Porcentaje Combustible - Energia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/comparativa_energia_combustible?year=2021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"comparativa_energia_combustible"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2021"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comparativa_energia_combustible?year=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comparativa_energia_combustible"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 02 Apr 2023 03:42:20 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "46"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"COMBUSTIBLE\": 0.8,\n        \"ENERGIA\": 0.2\n    }\n}"
+				},
+				{
+					"name": "404 - Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comparativa_energia_combustible?year=2021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comparativa_energia_combustible"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2021"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 02 Apr 2023 03:42:36 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "45"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"No data found for requested year\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Promedio Mensual Petroleo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/promedio_mensual_petroleo?year=2021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"promedio_mensual_petroleo"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2021"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comparativa_energia_combustible?year=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comparativa_energia_combustible"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 02 Apr 2023 03:42:20 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "46"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"COMBUSTIBLE\": 0.8,\n        \"ENERGIA\": 0.2\n    }\n}"
+				},
+				{
+					"name": "200 - Empty Data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/promedio_mensual_petroleo?year=2021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"promedio_mensual_petroleo"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2021"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 02 Apr 2023 03:43:33 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "60"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"ACEITE\": 0,\n        \"REFRIGERANTE\": 0,\n        \"COMBUSTIBLE\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}
