@@ -1,0 +1,42 @@
+version: '3.2'
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgis/postgis
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-SuperSecret}
+    volumes:
+      - ./volumes/pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    networks:
+      - privet-net
+    restart: unless-stopped
+
+  hack_the_future_api:
+    build: .
+    expose: [ "8000" ]
+    volumes:
+      - "./:/hack_the_future_api"
+    environment:
+      ENVIRONMENT: "dev" # dev, prod, test
+      SECRET_KEY: "v2_3yTfg_L8rvnXTZmW85hxN78AhbJNp"
+
+      DEV_DATABASE_NAME: "arkemix/hack-the-future"
+      DEV_DATABASE_USER: "arkemix"
+      DEV_DATABASE_PASSWORD: "v2_42g6d_jw2DgpL9X4kfRjQb5V2vQ3M"
+      DEV_DATABASE_HOST: "db.bit.io"
+      DEV_DATABASE_PORT: "5432"
+    command: uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 9006
+    networks:
+      - privet-net
+
+
+volumes:
+  target:
+
+networks:
+  privet-net:
+    driver: bridge
