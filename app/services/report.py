@@ -54,8 +54,8 @@ class ReportService:
             )
 
         return {
-            "fuel_percentage": round(fuel_percentage, 2),
-            "energy_percentage": round(energy_percentage, 2),
+            "COMBUSTIBLE": round(fuel_percentage, 2),
+            "ENERGIA": round(energy_percentage, 2),
         }
 
     def get_average_consumption_by_year(
