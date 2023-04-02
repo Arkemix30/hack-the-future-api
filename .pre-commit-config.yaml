@@ -39,6 +39,7 @@ repos:
     hooks:
     -   id: flake8
         additional_dependencies: [mccabe]
+        exclude: ^tests/
 
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v2.42.1
