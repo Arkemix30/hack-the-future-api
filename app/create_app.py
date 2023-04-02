@@ -1,5 +1,3 @@
-import os
-
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -14,8 +12,6 @@ logger = get_logger(__name__)
 
 def create_app(**kwargs):
     logger.info("Initializing app...")
-    if kwargs.get("test"):
-        os.environ["ENVIRONMENT"] = "test"
 
     app_settings = get_app_settings()
 

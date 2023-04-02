@@ -1,10 +1,10 @@
 # Python Imports
-from typing import Union
+from typing import Optional, Union
 
 # Third Party Imports
 from fastapi import Depends
 from sqlalchemy import func
-from sqlmodel import Session, select
+from sqlmodel import Session, column, select
 
 # Local Imports
 from app.core import get_logger
@@ -188,45 +188,22 @@ class FuelRepository:
     @handle_database_error
     def get_average_monthly_consumption(
         self, year: int
-    ) -> Union[list[FuelPercentageDB], DatabaseError]:
-        statement = (
-            select(
-                func.date_trunc("month", Fuel.datetime).label("month"),
-                func.avg(Fuel.quantity).label("avg_monthly_consumption"),
-            )
-            .where(
-                Fuel.datetime >= f"{year}-01-01 00:00:00",
-                Fuel.datetime <= f"{year}-12-31 23:59:59",
-            )
-            .group_by("month")
-            .order_by("month")
+    ) -> Union[int, DatabaseError]:
+        statement = select(
+            func.avg(Fuel.quantity).label("avg_monthly_consumption"),
+        ).where(
+            Fuel.datetime >= f"{year}-01-01 00:00:00",
+            Fuel.datetime <= f"{year}-12-31 23:59:59",
         )
 
         try:
-            result = self.session.exec(statement).fetchall()
-            result = [dict(row) for row in result]
+            result = self.session.exec(statement).first()
         except Exception as err:
             logger.error(
                 f"Error while fetching consumed fuel by year and fuel type, error: {err}"
             )
             raise err
-
-        if not result:
-            return {str(i): 0 for i in range(1, 13)}
-
-        # Convert datetime to string
-        response = {}
-        for row in result:
-            response[int(row["month"].strftime("%m"))] = round(
-                row["avg_monthly_consumption"], 2
-            )
-
-        # Fill the missing months with 0
-        for month in range(1, 13):
-            if month not in response:
-                response[month] = 0
-
-        return response
+        return result
 
     @handle_database_error
     def get_most_impactful_emission_type(self, year: int):
@@ -274,3 +251,80 @@ class FuelRepository:
             response[row.emission_type] = round((row.percentage / 100), 2)
 
         return response
+
+    @handle_database_error
+    def get_fuel_sum_by_year(
+        self, year: int
+    ) -> Union[Optional[float], DatabaseError]:
+        statement = select(
+            func.sum(Fuel.quantity).label("total"),
+        ).where(
+            Fuel.datetime >= f"{year}-01-01 00:00:00",
+            Fuel.datetime <= f"{year}-12-31 23:59:59",
+        )
+
+        try:
+            result = self.session.exec(statement).first()
+        except Exception as err:
+            logger.error(
+                f"Error while fetching consumed fuel by year and fuel type, error: {err}"
+            )
+            raise err
+
+        return result
+
+    @handle_database_error
+    def get_min_and_max_fuel_by_year(
+        self, year: int
+    ) -> Union[dict[str, float], DatabaseError]:
+        # Get the moth with the lowest consumption
+        lowest_fuel_month = (
+            select(
+                func.date_trunc("month", Fuel.datetime).label("month"),
+                func.sum(Fuel.quantity).label("total_quantity"),
+            )
+            .where(
+                Fuel.datetime >= f"{year}-01-01 00:00:00",
+                Fuel.datetime <= f"{year}-12-31 23:59:59",
+            )
+            .group_by("month")
+            .order_by(column("total_quantity"))
+            .limit(1)
+        )
+
+        try:
+            lowest_result = self.session.exec(lowest_fuel_month).first()
+        except Exception as err:
+            logger.error(
+                f"Error while fetching consumed fuel by year and fuel type, error: {err}"
+            )
+            raise err
+
+        highest_fuel_month = (
+            select(
+                func.date_trunc("month", Fuel.datetime).label("month"),
+                func.sum(Fuel.quantity).label("total_quantity"),
+            )
+            .where(
+                Fuel.datetime >= f"{year}-01-01 00:00:00",
+                Fuel.datetime <= f"{year}-12-31 23:59:59",
+            )
+            .group_by("month")
+            .order_by(column("total_quantity").desc())
+            .limit(1)
+        )
+
+        try:
+            highest_result = self.session.exec(highest_fuel_month).first()
+        except Exception as err:
+            logger.error(
+                f"Error while fetching consumed fuel by year and fuel type, error: {err}"
+            )
+            raise err
+
+        if not lowest_result or not highest_result:
+            return None
+        return {
+            "lowest": lowest_result.month.strftime("%B"),
+            "highest": highest_result.month.strftime("%B"),
+        }

@@ -1,5 +1,5 @@
 # isort:skip_file
-from typing import Union
+from typing import Optional, Union
 
 from fastapi import Depends
 from fastapi.encoders import jsonable_encoder
@@ -9,6 +9,7 @@ from app.models import Oil
 from app.repositories import OilRepository
 from app.schemas import OilCreateSchema, OilUpdateSchema
 from app.utils.errors import AppError, DatabaseError, ErrorType
+from app.definitions import OilType
 
 logger = get_logger(__name__)
 
@@ -113,3 +114,43 @@ class OilService:
                 error_type=ErrorType.DATASOURCE_ERROR,
                 message="Error while deleting Oil",
             )
+
+    def get_monthly_consumption_by_type_and_year(
+        self, year: int, oil_type: Optional[OilType] = OilType.ACEITE
+    ) -> Union[dict[str, int], AppError]:
+        try:
+            return (
+                self.oil_repository.get_monthly_consumption_by_type_and_year(
+                    year, oil_type
+                )
+            )
+        except DatabaseError as err:
+            logger.error(
+                f"DB Error while fetching monthly consumption, error: {err}"
+            )
+            return AppError(
+                error_type=ErrorType.DATASOURCE_ERROR,
+                message="Error while fetching monthly consumption",
+            )
+
+    def get_min_loss_by_type_and_year(
+        self, year: int, oil_type: Optional[OilType] = OilType.REFRIGERANTE
+    ) -> Union[dict[str, int], AppError]:
+        try:
+            result = self.oil_repository.get_min_loss_by_type_and_year(
+                year, oil_type
+            )
+        except DatabaseError as err:
+            logger.error(f"DB Error while fetching min lost, error: {err}")
+            return AppError(
+                error_type=ErrorType.DATASOURCE_ERROR,
+                message="Error while fetching min lost",
+            )
+
+        if not result:
+            return AppError(
+                error_type=ErrorType.NOT_FOUND,
+                message="Min loss not found for requested year",
+            )
+
+        return result

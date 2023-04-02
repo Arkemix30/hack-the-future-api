@@ -62,7 +62,7 @@ async def consumo_anual_por_categoria(
     )
 
 
-@fuel_router.get("/consumo_promedio_mensual/")
+@fuel_router.get("/consumo_promedio_mensual")
 async def consumo_promedio_mensual(
     year: int,
     fuel_service: FuelService = Depends(),
@@ -93,7 +93,7 @@ async def consumo_promedio_mensual(
     )
 
 
-@fuel_router.get("/porcentaje_por_segmento_anual/")
+@fuel_router.get("/porcentaje_por_segmento_anual")
 async def porcentaje_por_segmento_anual(
     year: int,
     fuel_service: FuelService = Depends(),
@@ -111,6 +111,37 @@ async def porcentaje_por_segmento_anual(
         )
 
     result = fuel_service.get_most_impactful_emission_type(year)
+    if isinstance(result, AppError):
+        raise HTTPException(
+            status_code=result.error_type,
+            detail=result.message,
+        )
+
+    return Response(
+        content=json.dumps({"data": result}),
+        status_code=200,
+        headers={"Content-Type": "application/json"},
+    )
+
+
+@fuel_router.get("/min_max_consumo_meses")
+async def min_max_consumo_meses(
+    year: int,
+    fuel_service: FuelService = Depends(),
+) -> Response:
+    if year is None:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Year is required",
+        )
+
+    if year < 1900 or year > dt.now().year:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Year must be between 1900 and {dt.now().year}",
+        )
+
+    result = fuel_service.get_min_and_max_fuel_by_year(year)
     if isinstance(result, AppError):
         raise HTTPException(
             status_code=result.error_type,
@@ -165,7 +196,7 @@ async def bulk_create_fuels(
 
     return Response(
         content=json.dumps({"data": "Fuels created succesfully"}),
-        status_code=201,
+        status_code=200,
         headers={"Content-Type": "application/json"},
     )
 

@@ -1,5 +1,6 @@
 # isort: skip_file
 import json
+from datetime import datetime as dt
 
 from fastapi import APIRouter, Depends, HTTPException, Response, status
 
@@ -30,6 +31,36 @@ async def list_energies(
     return result
 
 
+@roadtrip_router.get("/comparativa_promedio_mensual")
+async def comparativa_promedio_mensual(
+    year: int,
+    roadtrip_service: RoadtripService = Depends(),
+) -> Response:
+    if year is None:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Year is required",
+        )
+
+    if year < 1900 or year > dt.now().year:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Year must be between 1900 and {dt.now().year}",
+        )
+
+    result = roadtrip_service.get_average_monthly_comparative_percentage(year)
+    if isinstance(result, AppError):
+        raise HTTPException(
+            status_code=result.error_type,
+            detail=result.message,
+        )
+    return Response(
+        content=json.dumps({"data": result}),
+        status_code=200,
+        headers={"Content-Type": "application/json"},
+    )
+
+
 @roadtrip_router.get("/{id}", response_model=Roadtrip)
 async def retrieve_roadtrip(
     id: str,
@@ -45,7 +76,7 @@ async def retrieve_roadtrip(
 
 
 @roadtrip_router.post("/", response_model=Roadtrip)
-async def create_event(
+async def create_roadtrip(
     roadtrip: RoadtripCreateSchema,
     roadtrip_service: RoadtripService = Depends(),
 ) -> Roadtrip:
@@ -71,7 +102,7 @@ async def bulk_create_energies(
 
     return Response(
         content=json.dumps({"data": "Roadtrips created succesfully"}),
-        status_code=201,
+        status_code=200,
         headers={"Content-Type": "application/json"},
     )
 

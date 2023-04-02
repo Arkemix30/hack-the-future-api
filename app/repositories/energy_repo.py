@@ -1,5 +1,5 @@
 # Python Imports
-from typing import Union
+from typing import Optional, Union
 
 # Third Party Imports
 from fastapi import Depends
@@ -154,42 +154,53 @@ class EnergyRepository:
         `Union[list[Energy], DatabaseError]`
             A list of energys if found, otherwise an DatabaseError
         """
-        statement = (
-            select(
-                func.date_trunc("month", Energy.datetime).label("month"),
-                func.avg(Energy.quantity).label("avg_monthly_consumption"),
-            )
-            .where(
-                Energy.location == location,
-                Energy.datetime >= f"{year}-01-01 00:00:00",
-                Energy.datetime <= f"{year}-12-31 23:59:59",
-            )
-            .group_by("month")
-            .order_by("month")
+        statement = select(
+            func.avg(Energy.quantity).label("avg_monthly_consumption"),
+        ).where(
+            Energy.location == location,
+            Energy.datetime >= f"{year}-01-01 00:00:00",
+            Energy.datetime <= f"{year}-12-31 23:59:59",
         )
 
         try:
-            result = self.session.exec(statement).fetchall()
-            result = [dict(row) for row in result]
+            result = self.session.exec(statement).first()
         except Exception as err:
             logger.error(
                 f"Error while fetching consumed energy by year and energy type, error: {err}"
             )
             raise err
 
-        if not result:
-            return {str(i): 0 for i in range(1, 13)}
+        return result
 
-        # Convert datetime to string
-        response = {}
-        for row in result:
-            response[int(row["month"].strftime("%m"))] = round(
-                row["avg_monthly_consumption"], 2
+    @handle_database_error
+    def get_energy_sum_by_year(
+        self, year: int
+    ) -> Union[Optional[float], DatabaseError]:
+        """
+        Get the total energy consumption for a year.
+
+        Parameters
+        ----------
+        `year` : int
+            The year to get the total energy consumption for
+
+        Returns
+        -------
+        `Union[list[Energy], DatabaseError]`
+            A list of energys if found, otherwise an DatabaseError
+        """
+        statement = select(
+            func.sum(Energy.quantity).label("total_consumption"),
+        ).where(
+            Energy.datetime >= f"{year}-01-01 00:00:00",
+            Energy.datetime <= f"{year}-12-31 23:59:59",
+        )
+
+        try:
+            result = self.session.exec(statement).first()
+        except Exception as err:
+            logger.error(
+                f"Error while fetching consumed energy by year and energy type, error: {err}"
             )
-
-        # Fill the missing months with 0
-        for month in range(1, 13):
-            if month not in response:
-                response[month] = 0
-
-        return response
+            raise err
+        return result

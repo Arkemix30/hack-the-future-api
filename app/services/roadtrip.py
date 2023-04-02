@@ -115,3 +115,17 @@ class RoadtripService:
                 error_type=ErrorType.DATASOURCE_ERROR,
                 message="Error while deleting Roadtrip",
             )
+
+    def get_average_monthly_comparative_percentage(self, year: int):
+        try:
+            return self.roadtrip_repository.get_average_monthly_comparative_percentage(
+                year
+            )
+        except DatabaseError as err:
+            logger.error(
+                f"DB Error while getting average monthly comparative percentage, error: {err}"
+            )
+            return AppError(
+                error_type=ErrorType.DATASOURCE_ERROR,
+                message="Error while getting average monthly comparative percentage",
+            )

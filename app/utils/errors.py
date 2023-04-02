@@ -44,15 +44,17 @@ def handle_database_error(func: callable):
         try:
             return func(*args, **kwargs)
         except exc.SQLAlchemyError as err:
-            # Get the SQLSTATE error code
-            sqlstate = str(err.orig.diag.sqlstate)
-
-            # Check if the error code is in our list of known error codes
             error_code = None
-            for code in DatabaseErrorCode:
-                if code.value == sqlstate:
-                    error_code = code
-                    break
+            # sqlstate = None
+            # # Get the SQLSTATE error code
+            # if isinstance(err, exc.SQLAlchemyError):
+            #     sqlstate = str(err.orig.diag.sqlstate)
+
+            # # Check if the error code is in our list of known error codes
+            # for code in DatabaseErrorCode:
+            #     if code.value == sqlstate:
+            #         error_code = code
+            #         break
 
             # Raise our custom error with the relevant information
             raise DatabaseError(str(err), err, error_code)

@@ -121,7 +121,7 @@ class EnergyService:
         location: Optional[EnergyLocation] = EnergyLocation.PLANTA_DE_ENVASADO,
     ) -> Union[dict, AppError]:
         try:
-            return self.energy_repository.get_average_monthly_by_location_and_year(
+            result = self.energy_repository.get_average_monthly_by_location_and_year(
                 year, location
             )
         except DatabaseError as err:
@@ -132,3 +132,8 @@ class EnergyService:
                 error_type=ErrorType.DATASOURCE_ERROR,
                 message="Error while fetching average monthly Energy by location and year",
             )
+
+        if not result:
+            return 0
+
+        return round(result, 2)

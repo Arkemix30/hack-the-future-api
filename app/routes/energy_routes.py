@@ -33,7 +33,7 @@ async def list_energies(
     return result
 
 
-@energy_router.get("/consumo_promedio_mensual/")
+@energy_router.get("/consumo_promedio_mensual")
 async def consumo_promedio_mensual(
     year: int,
     location: Union[EnergyLocation, None] = EnergyLocation.PLANTA_DE_ENVASADO,
@@ -59,7 +59,11 @@ async def consumo_promedio_mensual(
             status_code=result.error_type,
             detail=result.message,
         )
-    return result
+    return Response(
+        content=json.dumps({"data": result}),
+        status_code=200,
+        headers={"Content-Type": "application/json"},
+    )
 
 
 @energy_router.get("/{id}", response_model=Energy)
@@ -103,7 +107,7 @@ async def bulk_create_energies(
 
     return Response(
         content=json.dumps({"data": "Energys created succesfully"}),
-        status_code=201,
+        status_code=200,
         headers={"Content-Type": "application/json"},
     )
 

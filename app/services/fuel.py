@@ -134,7 +134,7 @@ class FuelService:
 
     def get_average_monthly_consumption(
         self, year: int
-    ) -> Union[list[dict], AppError]:
+    ) -> Union[float, AppError]:
         try:
             result = self.fuel_repository.get_average_monthly_consumption(year)
         except DatabaseError as err:
@@ -146,11 +146,13 @@ class FuelService:
                 message="Error while fetching consumed fuel by year and fuel type",
             )
 
-        return result
+        if not result:
+            return 0
+        return round(result, 2)
 
     def get_most_impactful_emission_type(
         self, year: int
-    ) -> Union[list[dict], AppError]:
+    ) -> Union[dict[str, int], AppError]:
         try:
             result = self.fuel_repository.get_most_impactful_emission_type(
                 year
@@ -164,4 +166,24 @@ class FuelService:
                 message="Error while fetching consumed fuel by year and fuel type",
             )
 
+        return result
+
+    def get_min_and_max_fuel_by_year(
+        self, year: int
+    ) -> Union[list[dict], AppError]:
+        try:
+            result = self.fuel_repository.get_min_and_max_fuel_by_year(year)
+        except DatabaseError as err:
+            logger.error(
+                f"DB Error while fetching consumed fuel by year and fuel type, error: {err}"
+            )
+            return AppError(
+                error_type=ErrorType.DATASOURCE_ERROR,
+                message="Error while fetching consumed fuel by year and fuel type",
+            )
+        if not result:
+            return AppError(
+                error_type=ErrorType.NOT_FOUND,
+                message="No data found for the given year",
+            )
         return result
